@@ -88,6 +88,8 @@ main .main-logo img{
 main .main-input{
     width: 530px;
     margin: 0 auto;
+    /* Separación entre buscador y botones*/
+    margin-bottom: 30px;
 }
 /* Caja con bordes redondeados*/
 main .main-input-container{
@@ -97,6 +99,9 @@ main .main-input-container{
     /* Bordes redondeados*/
     border-radius: 20px;
     width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 /* Cajita de input*/
@@ -105,31 +110,105 @@ main .main-input input{
     border: none;
     /* Borde cuando seleccionas elemento*/
     outline: none;
-    width: 390px;
+    width: 430px;
 }
 
 main .main-input .search-icon{
     background-image: url(https://seekicon.com/free-icon-download/search_20.svg);
     background-size: contain;
-    padding-left: 6%;
+    padding-left: 9%;
     background-repeat: no-repeat;
     background-position: center;
+    /* TIP - Cuando no aparece una imagen poner altura o ancho */
+    height: 15px;
 }
 
 main .main-input .micro-icon{
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/726px-Google_mic.svg.png);
+    height: 17px;
+    width: 17px;
     background-size: contain;
-    padding-right: 15%;
+    background-position: center;
+    padding-left: 1%;
     background-repeat: no-repeat;
-    background-position: right;
-    margin-right: 10px;
-
 }
 
 main .main-input .cam-icon{
     background-image: url(https://static.wikia.nocookie.net/logopedia/images/2/2b/Google_Lens_2021.svg);
-    background-position: left;
+    background-position: center;
     background-size: contain;
+    width: 17px;
+    height: 17px;
     background-repeat: no-repeat;
-    padding-right: 15%;
+    padding-right: 5%;
+}
+/* Botones*/
+main .main-buttons{
+    width: 550px;
+    margin: 0 auto;
+}
+
+main .main-buttons div{
+    /* Inline-block: que esten en la misma línea*/
+    display: inline-block;
+}
+
+main .main-buttons button{
+    background-color: #f8f9fa;
+    border: none;
+    height: 30px;
+    font-size: 16px;
+    color: #3c4043;
+    padding: 0 15px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+/* EFECTO DE SOMBRA AL PASAR CURSOR*/
+main .main-input-container:hover{
+    /*eje x | eje y | blur-radius degradado | color */
+    box-shadow: 0 0 5px #20212447;
+}
+
+main .main-buttons button:hover{
+    color: #202124;
+    border: 1px solid #dadce0;
+    box-shadow: 0 1px 2px #20212447;
+}
+
+/* Espacio para el pie de página */
+
+/* Footer - Pie de página*/
+footer{
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
+}
+
+footer .footer-left{
+    list-style: none;
+    width: 50%;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    color: #70757a;
+}
+
+footer .footer-right{
+    list-style: none;
+    width: 40%;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    color: #70757a;;
 }
